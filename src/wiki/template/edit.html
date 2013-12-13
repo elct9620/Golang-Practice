@@ -1,0 +1,10 @@
+{{template "header" .}}
+<h1 class="ui header">Editing {{.Title}}</h1>
+
+<div class="ui form">
+  <form action="/save/{{.Title}}" method="POST">
+    <div class="field"><textarea name="body" rows="20" cols="80">{{printf "%s" .Body}}</textarea></div>
+    <div class="field"><button type="submit" class="ui blue button">Save</button></div>
+  </form>
+</div>
+{{template "footer" .}}

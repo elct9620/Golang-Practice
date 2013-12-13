@@ -1,0 +1,9 @@
+{{template "header" .}}
+<div class="ui header">
+  <h1>{{.Title}}</h1>
+</div>
+<div class="ui segment">
+  {{printf "%s" .Body | br}}
+</div>
+<a href="/edit/{{.Title}}" class="ui green button">Edit</a>
+{{template "footer" .}}
